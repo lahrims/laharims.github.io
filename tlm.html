@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PPT</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: black;
+            color: white;
+        }
+
+        .image-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .description {
+            text-align: center;
+            height: 150px;
+            align-content: center;
+            position: relative;
+            border: 1px solid white;
+            max-width: 500px;
+            position: relative;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 style="text-align: center;">Path Planning for Two Link Manipulater</h1>
+
+    <div class="image-container">
+        <video width="500px" height="500px" controls="controls">
+            <source src="videos/path_planning_arm.mov" type="video/mp4" /></video>
+    </div>
+
+    
+    <div class="description">
+        <ul>
+            <li>Developed a Matlab program for determining the path of a two-link manipulator, utilizing the artificial potential field approach. </li>
+            <li>To simulate the mechanism following the defined path, a cubic polynomial function was implemented. </li>
+            <li>Intermediate waypoints were strategically placed, and a smooth trajectory was developed using a cubic polynomial function to smoothly transition from the initial to the final position.</li>
+            
+        </ul>
+    </div>
+
+</body>
+</html>
