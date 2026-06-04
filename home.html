@@ -4,186 +4,250 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Robotics Engineer Portfolio</title>
+    <title>Lahari Madhusudhan — Robotics Engineer</title>
+    <meta name="description"
+        content="Portfolio of Lahari Madhusudhan, Robotics & Intelligent Autonomous Systems engineer specializing in machine vision, perception and navigation.">
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
+    <!-- ===================== NAV ===================== -->
     <nav id="nav-bar">
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#courses">Courses</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="resume.html">Resume</a></li>
-        </ul>
-    
+        <div class="nav-inner">
+            <a href="#hero" class="brand">Lahari<span>.</span></a>
+            <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <i class="fa fa-bars"></i>
+            </button>
+            <ul id="nav-menu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="resume.html" class="nav-cta">Resume</a></li>
+            </ul>
+        </div>
     </nav>
-    <div>
-        <header>
-            <img src="images/background.jpeg" alt="Snow" style="width:100%;">
-        </header>
-    </div>
-    
+
+    <!-- ===================== HERO ===================== -->
+    <header id="hero" class="hero">
+        <div class="hero-content">
+            <p class="greeting">Hello, I'm Lahari Madhusudhan</p>
+            <h1>Building <span class="accent">intelligent</span><br>autonomous machines</h1>
+            <p class="role"><span class="typed"></span></p>
+            <div class="hero-actions">
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+            </div>
+        </div>
+        <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+            <i class="fa fa-angle-down"></i>
+        </a>
+    </header>
+
+    <!-- ===================== ABOUT ===================== -->
     <section id="about">
-        <div class="about_me">
-            <div class="dp">
-                <img src="images/dp.jpeg">
+        <div class="wrap about_me">
+            <div class="dp reveal">
+                <img src="images/dp.jpeg" alt="Lahari Madhusudhan">
             </div>
-            <div class="text">
-                <h1>About Me</h1>
-                <p style="font-size: 30px; text-align: justify;">I earned a Master's in Engineering with a focus on Robotics and Intelligent Autonomous Systems from the University of Cincinnati, maintaining a strong GPA of 3.815. I find joy in tackling Machine Vision, Perception and Navigation challenges. The thrill of enabling machines to detect obstacles and facilitating human-machine interaction is fascinating to me. Sensor fusion in Machine Automation never ceases to amaze, and I love sharing my excitement about it! If not Coding or Falling for robots, you can find me solving puzzles, reading Fantasy or Stargazing</p>
+            <div class="text reveal">
+                <span class="eyebrow" style="color: var(--accent); letter-spacing:3px; text-transform:uppercase; font-size:0.8rem; font-weight:600;">About Me</span>
+                <h2>Robotics &amp; Intelligent Autonomous Systems</h2>
+                <p>
+                    I earned a Master's in Engineering with a focus on Robotics and Intelligent Autonomous
+                    Systems from the University of Cincinnati, maintaining a strong GPA of 3.815. I find joy in
+                    tackling Machine Vision, Perception and Navigation challenges. The thrill of enabling machines
+                    to detect obstacles and facilitating human-machine interaction is fascinating to me. Sensor
+                    fusion in machine automation never ceases to amaze, and I love sharing my excitement about it!
+                    If not coding or falling for robots, you can find me solving puzzles, reading fantasy or
+                    stargazing.
+                </p>
+                <div class="about-stats">
+                    <div class="stat">
+                        <div class="num">3.815</div>
+                        <div class="label">Master's GPA</div>
+                    </div>
+                    <div class="stat">
+                        <div class="num">5+</div>
+                        <div class="label">Robotics Projects</div>
+                    </div>
+                    <div class="stat">
+                        <div class="num">7</div>
+                        <div class="label">Graduate Courses</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-    
-    
 
+    <!-- ===================== PROJECTS ===================== -->
     <section id="projects">
-        <h2>Projects</h2>
-        <div class="row">
-            <div class="col">
-                <div class="content">
-                    <a href="ekf.html"><img src="images/ekf1.jpg" alt="ekf" style="width:100%"></a>
-                    <p style="font-size: 30px; text-align: center;">Implementing Extended Kalmann Filter on AGV Odometry Data</p>
-                </div>
+        <div class="wrap">
+            <div class="section-head reveal">
+                <span class="eyebrow">What I've built</span>
+                <h2>Projects</h2>
+                <div class="underline"></div>
             </div>
-            <div class="col">
-                <div class="content">
-                    <a href="bayes.html"><img src="images/bayes_net.jpg" alt="bayes" style="width:100%"></a>
-                    <p style="font-size: 30px; text-align: center;">Fuzzy Bayesian Network “Risk Analysis” on UAV Missions</p>
-                </div>
-            </div>
-            <div class="col">
-                <div class="content">
-                    <a href="acs.html"> <video width="400px" height="290px" controls="controls">
-                        <source src="videos/edited_ACS_TSP.mov" type="video/mp4" /></video></a>
-                        <p style="font-size: 30px; text-align: center;">Ant Colony Optimization to solve the Travelling Salesman Problem</p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="content">
-                    <a href="pps.html"> <video width="400px" height="290px" controls="controls">
-                        <source src="videos/path_planning.mov" type="video/mp4" /></video></a>
-                        <p style="font-size: 30px; text-align: center;">Simple Path Planning using Potential Fields</p>
-                </div>
-            </div>
-            <div class="col">
-                <div class="content">
-                    <a href="tlm.html"> <video width="400px" height="290px" controls="controls">
-                        <source src="videos/path_planning_arm.mov" type="video/mp4" /></video></a>
-                        <p style="font-size: 30px; text-align: center;">Path Planning for Two Link Manipulater</p>
-                </div>
-            </div>
+            <!-- Cards are rendered from projects.js -->
+            <div class="project-grid" id="project-grid"></div>
         </div>
     </section>
-    
+
+    <!-- ===================== COURSES ===================== -->
     <section id="courses">
-        <h1>Courses</h1>
-        <button type="button" class="collapsible">Robot Control And Design</button>
-        <div class="content1">
-        <p>Robot Dynamics and Transformations, Inverse Kinematics, Forward Kinematics, Velocity Kinematics, Mobile Robots, Path Planning and Trajectory Planning </p>
-        </div>
-        <button type="button" class="collapsible">Machine Learning</button>
-        <div class="content1">
-        <p>Algorithms inspired from AI, Classifiers, Bayesian Classifiers, Linear Regression, Logistic Regression, Probably Almost Correct (PAC) Learning , Support Vector Machines,  Neural Networks,  Evaluation of classifiers  </p>
-        </div>
-        <button type="button" class="collapsible">Deep Learning</button>
-        <div class="content1">
-        <p> Multilayer perceptron, Representation Learning, Recurrent Neural Networks, Backpropagation Through Time, LSTM, GRU, CNN, Attention, Transformer, Conv2D </p>
-        </div>
-        <button type="button" class="collapsible">Decision Engineering</button>
-        <div class="content1">
-        <p> Cost Functions, Decision making in uncertain environments : Bayesian approach, Kalman filter, Graphical models: Bayesian networks, Simple decisions: utility theory, Dynamic Programming, Distributed optimization techniques: PSO, ACO</p>
-        </div>
-        <button type="button" class="collapsible">Artificial Intelligence</button>
-        <div class="content1">
-        <p> A*, Tree Search, Constraint Satisfaction, Logic Based Knowledge Representation and Reasoning, First Order Predicate Calculus, Uncertainty Handling Using Bayesian Probability Theory</p>
-        </div>
-        <button type="button" class="collapsible">Big Data and AI</button>
-        <div class="content1">
-        <p> Industrial Big Data Analytics and Industrial AI, Data Issues on Industrial Big Data System, Signal Processing, Machine Health Monitoring</p>
-        </div>
-        <button type="button" class="collapsible">Intro to Robotics</button>
-        <div class="content1">
-        <p> Robot Kinematics, Types, Transformations, Decision Matrix for Robot Selection, Cost Estimation</p>
+        <div class="wrap">
+            <div class="section-head reveal">
+                <span class="eyebrow">Graduate coursework</span>
+                <h2>Courses</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="accordion reveal">
+                <button type="button" class="collapsible">Robot Control and Design<span class="plus">+</span></button>
+                <div class="content1">
+                    <p>Robot dynamics and transformations, inverse kinematics, forward kinematics, velocity
+                        kinematics, mobile robots, path planning and trajectory planning.</p>
+                </div>
+
+                <button type="button" class="collapsible">Machine Learning<span class="plus">+</span></button>
+                <div class="content1">
+                    <p>Algorithms inspired by AI, classifiers, Bayesian classifiers, linear regression, logistic
+                        regression, Probably Approximately Correct (PAC) learning, support vector machines, neural
+                        networks, evaluation of classifiers.</p>
+                </div>
+
+                <button type="button" class="collapsible">Deep Learning<span class="plus">+</span></button>
+                <div class="content1">
+                    <p>Multilayer perceptron, representation learning, recurrent neural networks, backpropagation
+                        through time, LSTM, GRU, CNN, attention, transformer, Conv2D.</p>
+                </div>
+
+                <button type="button" class="collapsible">Decision Engineering<span class="plus">+</span></button>
+                <div class="content1">
+                    <p>Cost functions, decision making in uncertain environments: Bayesian approach, Kalman filter,
+                        graphical models: Bayesian networks, simple decisions: utility theory, dynamic programming,
+                        distributed optimization techniques: PSO, ACO.</p>
+                </div>
+
+                <button type="button" class="collapsible">Artificial Intelligence<span class="plus">+</span></button>
+                <div class="content1">
+                    <p>A*, tree search, constraint satisfaction, logic-based knowledge representation and reasoning,
+                        first-order predicate calculus, uncertainty handling using Bayesian probability theory.</p>
+                </div>
+
+                <button type="button" class="collapsible">Big Data and AI<span class="plus">+</span></button>
+                <div class="content1">
+                    <p>Industrial big data analytics and industrial AI, data issues on industrial big data systems,
+                        signal processing, machine health monitoring.</p>
+                </div>
+
+                <button type="button" class="collapsible">Intro to Robotics<span class="plus">+</span></button>
+                <div class="content1">
+                    <p>Robot kinematics, types, transformations, decision matrix for robot selection, cost
+                        estimation.</p>
+                </div>
+            </div>
         </div>
     </section>
 
+    <!-- ===================== SKILLS ===================== -->
     <section id="skills">
-        <h1>Skills</h1>
-        <div class="row1">
-            <div class="column" onclick="openTab('b1');" style="background:grey;color: white;">
-            Programming
+        <div class="wrap">
+            <div class="section-head reveal">
+                <span class="eyebrow">My toolkit</span>
+                <h2>Skills</h2>
+                <div class="underline"></div>
             </div>
-            <div class="column" onclick="openTab('b2');" style="background:whitesmoke;color:black">
-            Libraries
+            <div class="reveal">
+                <div class="skill-tabs">
+                    <button class="skill-tab active" data-target="b1">Programming</button>
+                    <button class="skill-tab" data-target="b2">Libraries</button>
+                    <button class="skill-tab" data-target="b3">Specialties</button>
+                </div>
+                <div class="skill-panels">
+                    <div id="b1" class="skill-panel active">
+                        <div class="chip-grid">
+                            <span class="chip">ROS</span>
+                            <span class="chip">C++</span>
+                            <span class="chip">Python</span>
+                            <span class="chip">MATLAB</span>
+                            <span class="chip">Java</span>
+                            <span class="chip">RViz</span>
+                            <span class="chip">Gazebo</span>
+                            <span class="chip">Git</span>
+                            <span class="chip">Docker</span>
+                            <span class="chip">Prolog</span>
+                            <span class="chip">C</span>
+                            <span class="chip">HTML</span>
+                            <span class="chip">CSS</span>
+                        </div>
+                    </div>
+                    <div id="b2" class="skill-panel">
+                        <div class="chip-grid">
+                            <span class="chip">PyTorch</span>
+                            <span class="chip">TensorFlow</span>
+                            <span class="chip">OpenCV</span>
+                            <span class="chip">Nav2</span>
+                        </div>
+                    </div>
+                    <div id="b3" class="skill-panel">
+                        <div class="chip-grid">
+                            <span class="chip">Kalman / Extended Kalman Filter</span>
+                            <span class="chip">Bayesian Network Analysis</span>
+                            <span class="chip">Problem Solving with ML / AI</span>
+                            <span class="chip">SLAM</span>
+                            <span class="chip">Computer Vision</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="column" onclick="openTab('b3');" style="background:	#353839;color: white;">
-            Other
-            </div>
         </div>
-
-        <div id="b1" class="containerTab" style="display:none;background:grey;color: white;">
-            <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-            <p style="font-size: 15px;">
-                ROS, C++, Python, MATLAB, Java, RViz, Gazebo, Git, Docker, Prolog, C, HTML, CSS.
-            </p>
-        </div>
-        <div id="b2" class="containerTab" style="display:none;background:whitesmoke;color:black">
-            <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-            <p style="font-size: 15px;">
-                Pytorch, Tensorflow, OpenCV, nav2.
-            </p>
-        </div>
-        <div id="b3" class="containerTab" style="display:none;background:#353839;color: white;">
-            <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-            <p style="font-size: 15px;">
-            Sensor Fusion using Filtering Methods(Kalman Filter, Extended Kalman Filter), Bayesian Network Analysis, Problem solving with
-            ML/AI, SLAM, Computer Vision
-            </p>
-        </div>
-        
     </section>
 
+    <!-- ===================== CONTACT ===================== -->
     <section id="contact">
-        <h1>Contact</h1>
-        <div class="con">
-            <i class="fa fa-envelope" style="font-size:36px" id="icon"></i><p style="font-size: large;"id="icon">Email: madhussi@mail.uc.edu</p>
-            <i class="fa fa-linkedin" style="font-size:36px" id="icon"></i><p style="font-size: large;"id="icon"> <a href="https://www.linkedin.com/in/lahari-madhusudhan/" target="_blank">LinkedIn Profile</a></p>
-            <i class="fa fa-github" style="font-size:36px" id="icon"></i><p style="font-size: large;;"id="icon"><a href="https://github.com/lahrims" target="_blank">Github Profile</a></p>
+        <div class="wrap">
+            <div class="section-head reveal">
+                <span class="eyebrow">Let's connect</span>
+                <h2>Contact</h2>
+                <div class="underline"></div>
+            </div>
+            <p class="contact-lead reveal">
+                I'm always happy to talk robotics, perception and autonomy. Reach out through any of these.
+            </p>
+            <div class="contact-grid reveal">
+                <a class="contact-card" href="mailto:madhussi@mail.uc.edu">
+                    <i class="fa fa-envelope"></i>
+                    <div class="ctitle">Email</div>
+                    <div class="cval">madhussi@mail.uc.edu</div>
+                </a>
+                <a class="contact-card" href="https://www.linkedin.com/in/lahari-madhusudhan/" target="_blank"
+                    rel="noopener">
+                    <i class="fa fa-linkedin"></i>
+                    <div class="ctitle">LinkedIn</div>
+                    <div class="cval">in/lahari-madhusudhan</div>
+                </a>
+                <a class="contact-card" href="https://github.com/lahrims" target="_blank" rel="noopener">
+                    <i class="fa fa-github"></i>
+                    <div class="ctitle">GitHub</div>
+                    <div class="cval">github.com/lahrims</div>
+                </a>
+            </div>
         </div>
     </section>
-    
-    <script>
-        var coll = document.getElementsByClassName("collapsible");
-        var i;
-        
-        for (i = 0; i < coll.length; i++) {
-            coll[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var content = this.nextElementSibling;
-                if (content.style.display === "block") {
-                content.style.display = "none";
-                } else {
-                content.style.display = "block";
-                }
-            });
-        }
 
-        function openTab(tabName) {
-        var i, x;
-        x = document.getElementsByClassName("containerTab");
-        for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
-        }
-        document.getElementById(tabName).style.display = "block";
-        }
-    </script>
+    <footer>
+        <p>&copy; <span id="year"></span> Lahari Madhusudhan &middot; Built with care &amp; a love for robots.</p>
+    </footer>
+
+    <script src="projects.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
