@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lahari Madhusudhan — Robotics Engineer</title>
+    <title>Lahari Madhusudhan - Robotics Engineer</title>
     <meta name="description"
         content="Portfolio of Lahari Madhusudhan, Robotics & Intelligent Autonomous Systems engineer specializing in machine vision, perception and navigation.">
     <link rel="stylesheet" href="stylesheet.css">
@@ -38,8 +38,36 @@
     <!-- ===================== HERO ===================== -->
     <header id="hero" class="hero">
         <div class="hero-content">
+            <div class="hero-robot" aria-hidden="true">
+            <svg viewBox="0 0 240 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- antenna -->
+                <line class="rb" x1="120" y1="44" x2="120" y2="20" />
+                <circle class="rb" cx="120" cy="13" r="7" />
+                <!-- ears -->
+                <path class="rb" d="M42 120 h-18 a8 8 0 0 0 -8 8 v18 a8 8 0 0 0 8 8 h18" />
+                <path class="rb" d="M198 120 h18 a8 8 0 0 1 8 8 v18 a8 8 0 0 1 -8 8 h-18" />
+                <!-- head -->
+                <rect class="rb" x="42" y="44" width="156" height="150" rx="34" />
+                <!-- face screen -->
+                <rect class="rb" x="64" y="70" width="112" height="98" rx="22" />
+                <!-- eyes -->
+                <circle class="rb eye" cx="98" cy="112" r="16" />
+                <circle class="rb eye" cx="142" cy="112" r="16" />
+                <circle class="rb pupil" cx="98" cy="112" r="5" />
+                <circle class="rb pupil" cx="142" cy="112" r="5" />
+                <!-- highlights -->
+                <circle class="hl" cx="103" cy="107" r="2.4" />
+                <circle class="hl" cx="147" cy="107" r="2.4" />
+                <!-- smile -->
+                <path class="rb" d="M104 142 q16 14 32 0" />
+                <!-- neck -->
+                <line class="rb" x1="104" y1="194" x2="104" y2="210" />
+                <line class="rb" x1="136" y1="194" x2="136" y2="210" />
+                <path class="rb" d="M88 210 h64 a10 10 0 0 1 10 10 v6 h-84 v-6 a10 10 0 0 1 10 -10 z" />
+            </svg>
+            </div>
             <p class="greeting">Hello, I'm Lahari Madhusudhan</p>
-            <h1>Building <span class="accent">intelligent</span><br>autonomous machines</h1>
+            <h1>Engineering <span class="accent">intelligent</span><br>autonomous systems</h1>
             <p class="role"><span class="typed"></span></p>
             <div class="hero-actions">
                 <a href="#projects" class="btn btn-primary">View My Work</a>
@@ -58,29 +86,40 @@
                 <img src="images/dp.jpeg" alt="Lahari Madhusudhan">
             </div>
             <div class="text reveal">
-                <span class="eyebrow" style="color: var(--accent); letter-spacing:3px; text-transform:uppercase; font-size:0.8rem; font-weight:600;">About Me</span>
-                <h2>Robotics &amp; Intelligent Autonomous Systems</h2>
+                <span class="about-kicker">About Me</span>
+                <h2>Machine Learning &amp; Autonomy Engineer</h2>
                 <p>
-                    I earned a Master's in Engineering with a focus on Robotics and Intelligent Autonomous
-                    Systems from the University of Cincinnati, maintaining a strong GPA of 3.815. I find joy in
-                    tackling Machine Vision, Perception and Navigation challenges. The thrill of enabling machines
-                    to detect obstacles and facilitating human-machine interaction is fascinating to me. Sensor
-                    fusion in machine automation never ceases to amaze, and I love sharing my excitement about it!
-                    If not coding or falling for robots, you can find me solving puzzles, reading fantasy or
+                    I'm Lahari, and I like building things that make robots a little less confused.
+                </p>
+                <p>
+                    Most of my work is around perception, autonomy, and machine learning: radar tracking,
+                    computer vision, sensor fusion, path planning, and getting models to actually run on edge
+                    devices instead of just looking good in a notebook.
+                </p>
+                <p>
+                    I like messy problems: noisy sensors, weird edge cases, real-world data, and systems that
+                    need to make safe decisions anyway.
+                </p>
+                <p>
+                    This portfolio is a collection of the projects I've worked on, the things I've built, and the
+                    problems that made me stare at my screen a little too long.
+                </p>
+                <p>
+                    When I'm not debugging something, I'm probably solving puzzles, reading fantasy, or
                     stargazing.
                 </p>
                 <div class="about-stats">
                     <div class="stat">
-                        <div class="num">3.815</div>
+                        <div class="num">3.8</div>
                         <div class="label">Master's GPA</div>
+                    </div>
+                    <div class="stat">
+                        <div class="num">3+</div>
+                        <div class="label">Years in Industry</div>
                     </div>
                     <div class="stat">
                         <div class="num">5+</div>
                         <div class="label">Robotics Projects</div>
-                    </div>
-                    <div class="stat">
-                        <div class="num">7</div>
-                        <div class="label">Graduate Courses</div>
                     </div>
                 </div>
             </div>
@@ -166,43 +205,42 @@
             </div>
             <div class="reveal">
                 <div class="skill-tabs">
-                    <button class="skill-tab active" data-target="b1">Programming</button>
-                    <button class="skill-tab" data-target="b2">Libraries</button>
-                    <button class="skill-tab" data-target="b3">Specialties</button>
+                    <button class="skill-tab active" data-target="b1">Software</button>
+                    <button class="skill-tab" data-target="b2">Machine Learning</button>
+                    <button class="skill-tab" data-target="b3">Robotics</button>
                 </div>
                 <div class="skill-panels">
                     <div id="b1" class="skill-panel active">
                         <div class="chip-grid">
-                            <span class="chip">ROS</span>
                             <span class="chip">C++</span>
-                            <span class="chip">Python</span>
                             <span class="chip">MATLAB</span>
+                            <span class="chip">Python</span>
+                            <span class="chip">ROS2</span>
                             <span class="chip">Java</span>
-                            <span class="chip">RViz</span>
-                            <span class="chip">Gazebo</span>
-                            <span class="chip">Git</span>
                             <span class="chip">Docker</span>
-                            <span class="chip">Prolog</span>
-                            <span class="chip">C</span>
-                            <span class="chip">HTML</span>
-                            <span class="chip">CSS</span>
+                            <span class="chip">Git</span>
+                            <span class="chip">Linux</span>
+                            <span class="chip">Test-Driven Development</span>
+                            <span class="chip">Agile Methodology</span>
                         </div>
                     </div>
                     <div id="b2" class="skill-panel">
                         <div class="chip-grid">
+                            <span class="chip">Keras</span>
                             <span class="chip">PyTorch</span>
-                            <span class="chip">TensorFlow</span>
-                            <span class="chip">OpenCV</span>
-                            <span class="chip">Nav2</span>
+                            <span class="chip">Ultralytics</span>
+                            <span class="chip">Semantic Segmentation</span>
+                            <span class="chip">Instance Segmentation</span>
+                            <span class="chip">Classification</span>
                         </div>
                     </div>
                     <div id="b3" class="skill-panel">
                         <div class="chip-grid">
-                            <span class="chip">Kalman / Extended Kalman Filter</span>
-                            <span class="chip">Bayesian Network Analysis</span>
-                            <span class="chip">Problem Solving with ML / AI</span>
-                            <span class="chip">SLAM</span>
                             <span class="chip">Computer Vision</span>
+                            <span class="chip">Sensor Fusion</span>
+                            <span class="chip">Data Association</span>
+                            <span class="chip">Filtering</span>
+                            <span class="chip">Motion Planning</span>
                         </div>
                     </div>
                 </div>

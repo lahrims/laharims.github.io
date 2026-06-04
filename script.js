@@ -10,8 +10,27 @@ document.addEventListener("DOMContentLoaded", () => {
     initSkillTabs();
     initTyping();
     initReveal();
+    initHeroRobot();
     setYear();
 });
+
+/* ---------- Hero robot: glowy intro fade-in ---------- */
+function initHeroRobot() {
+    const svg = document.querySelector(".hero-robot svg");
+    if (!svg) return;
+
+    // Smooth fade/scale-in on load before the looping glow takes over.
+    svg.style.opacity = "0";
+    svg.style.transform = "scale(0.92)";
+    svg.style.transition = "opacity 1.2s ease, transform 1.2s ease";
+    requestAnimationFrame(() => {
+        setTimeout(() => {
+            svg.style.removeProperty("opacity");
+            svg.style.removeProperty("transform");
+            svg.style.removeProperty("transition");
+        }, 120);
+    });
+}
 
 /* ---------- Render projects from projects.js ---------- */
 function renderProjects() {
@@ -133,10 +152,10 @@ function initTyping() {
     if (!el) return;
 
     const words = [
-        "Robotics Engineer",
-        "Perception & Navigation",
-        "Sensor Fusion Enthusiast",
-        "Machine Vision Developer",
+        "Autonomy",
+        "Sensor Filtering",
+        "Perception",
+        "Machine Learning",
     ];
     let w = 0,
         c = 0,

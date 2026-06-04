@@ -1,14 +1,14 @@
 /* ============================================================
-   PROJECTS DATA  —  your "internal endpoint"
+   PROJECTS DATA - your "internal endpoint"
    ------------------------------------------------------------
    To add a new project, just append an object to the PROJECTS
    array below. A card renders automatically on the home page.
 
    Fields:
-     title       (string)  — project title
-     description (string)   — short summary shown on the card
-     link        (string)   — page to open (e.g. "myproject.html")
-     tags        (string[]) — small pills (tools / topics)
+     title       (string)  - project title
+     description (string)  - short summary shown on the card
+     link        (string)  - page to open (e.g. "myproject.html")
+     tags        (string[]) - small pills (tools / topics)
      media       (object):
          type = "image"  -> { type: "image", src: "images/foo.jpg" }
          type = "video"  -> { type: "video", src: "videos/foo.mov" }
@@ -56,7 +56,7 @@ const PROJECTS = [
         media: { type: "video", src: "videos/path_planning_arm.mov" },
     },
 
-    // 👇 Append new projects here, e.g.:
+    // Append new projects here, e.g.:
     // {
     //     title: "My New Project",
     //     description: "What it does in one or two sentences.",
