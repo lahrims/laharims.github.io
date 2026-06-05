@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
         rel="stylesheet">
 </head>
 
@@ -53,11 +53,13 @@
                 <!-- eyes -->
                 <circle class="rb eye" cx="98" cy="112" r="16" />
                 <circle class="rb eye" cx="142" cy="112" r="16" />
-                <circle class="rb pupil" cx="98" cy="112" r="5" />
-                <circle class="rb pupil" cx="142" cy="112" r="5" />
-                <!-- highlights -->
-                <circle class="hl" cx="103" cy="107" r="2.4" />
-                <circle class="hl" cx="147" cy="107" r="2.4" />
+                <g class="pupils">
+                    <circle class="rb pupil" cx="98" cy="112" r="5" />
+                    <circle class="rb pupil" cx="142" cy="112" r="5" />
+                    <!-- highlights -->
+                    <circle class="hl" cx="103" cy="107" r="2.4" />
+                    <circle class="hl" cx="147" cy="107" r="2.4" />
+                </g>
                 <!-- smile -->
                 <path class="rb" d="M104 142 q16 14 32 0" />
                 <!-- neck -->
@@ -81,8 +83,48 @@
 
     <!-- ===================== ABOUT ===================== -->
     <section id="about">
+        <div class="about-stars" aria-hidden="true">
+            <span class="stars stars-sm"></span>
+            <span class="stars stars-md"></span>
+            <span class="stars stars-lg"></span>
+            <span class="shooting-star"></span>
+            <span class="shooting-star shooting-star-2"></span>
+        </div>
+
+        <!-- Themed ambient scenes: hidden by default; one reveals as a full-section
+             background when the photo stack lands on a photo tagged with a matching
+             theme (see ABOUT_PHOTOS in script.js). -->
+        <div class="about-scenes" aria-hidden="true">
+            <!-- Reading atmosphere (theme: "reading") -->
+            <div class="about-scene scene-reading" data-scene="reading">
+                <span class="scene-wash"></span>
+                <div class="scene-particles">
+                    <span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span>
+                </div>
+            </div>
+
+            <!-- Stargazing atmosphere (theme: "stargazing") -->
+            <div class="about-scene scene-stargazing" data-scene="stargazing">
+                <span class="scene-wash"></span>
+                <div class="scene-particles">
+                    <span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span>
+                </div>
+            </div>
+
+            <!-- LEGO atmosphere (theme: "legos") -->
+            <div class="about-scene scene-legos" data-scene="legos">
+                <span class="scene-wash"></span>
+                <div class="scene-particles">
+                    <span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+
         <div class="wrap about_me">
-            <div class="dp reveal">
+            <div class="dp reveal" data-photo-stack>
                 <img src="images/dp.jpeg" alt="Lahari Madhusudhan">
             </div>
             <div class="text reveal">
