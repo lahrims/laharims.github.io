@@ -20,9 +20,14 @@
     --radius-sm: 10px;
     --shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
     --max-width: 1180px;
-    --serif: "Playfair Display", "Times New Roman", Times, serif;
-    --sans: "Poppins", "Segoe UI", system-ui, -apple-system, sans-serif;
-    --mono: "JetBrains Mono", "Courier New", Courier, monospace;
+    /* Type system: heading / body / small-text */
+    --font-heading: "Space Grotesk", "Segoe UI", system-ui, sans-serif;
+    --font-body: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+    --font-small: "JetBrains Mono", "Courier New", Courier, monospace;
+    /* Back-compat aliases */
+    --serif: var(--font-heading);
+    --sans: var(--font-body);
+    --mono: var(--font-small);
     --t: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 

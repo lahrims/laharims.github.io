@@ -14,10 +14,13 @@ document.addEventListener("DOMContentLoaded", () => {
     setYear();
 });
 
-/* ---------- Hero robot: glowy intro fade-in ---------- */
+/* ---------- Hero robot: glowy intro fade-in + cursor following ---------- */
 function initHeroRobot() {
-    const svg = document.querySelector(".hero-robot svg");
-    if (!svg) return;
+    const robot = document.querySelector(".hero-robot");
+    const svg = robot && robot.querySelector("svg");
+    const pupils = robot && robot.querySelector(".pupils");
+    const hero = document.getElementById("hero");
+    if (!robot || !svg || !hero) return;
 
     // Smooth fade/scale-in on load before the looping glow takes over.
     svg.style.opacity = "0";
@@ -27,9 +30,50 @@ function initHeroRobot() {
         setTimeout(() => {
             svg.style.removeProperty("opacity");
             svg.style.removeProperty("transform");
-            svg.style.removeProperty("transition");
+            svg.style.transition = "transform 0.18s ease-out";
         }, 120);
     });
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    // Robot follows the cursor while it's over the hero.
+    let raf = null;
+    let tx = 0, ty = 0, rot = 0, px = 0, py = 0;
+
+    const onMove = (e) => {
+        const r = robot.getBoundingClientRect();
+        const cx = r.left + r.width / 2;
+        const cy = r.top + r.height / 2;
+        // Normalized direction to cursor, clamped to [-1, 1].
+        const nx = Math.max(-1, Math.min(1, (e.clientX - cx) / (window.innerWidth / 2)));
+        const ny = Math.max(-1, Math.min(1, (e.clientY - cy) / (window.innerHeight / 2)));
+
+        // Head: gentle translate + tilt toward cursor.
+        tx = nx * 16;
+        ty = ny * 12;
+        rot = nx * 5;
+        // Pupils: move within the eye sockets (SVG viewBox units).
+        px = nx * 4.5;
+        py = ny * 3.5;
+
+        if (!raf) raf = requestAnimationFrame(apply);
+    };
+
+    const apply = () => {
+        svg.style.transform = `translate(${tx.toFixed(1)}px, ${ty.toFixed(1)}px) rotate(${rot.toFixed(2)}deg)`;
+        if (pupils) {
+            pupils.setAttribute("transform", `translate(${px.toFixed(2)} ${py.toFixed(2)})`);
+        }
+        raf = null;
+    };
+
+    const reset = () => {
+        tx = ty = rot = px = py = 0;
+        if (!raf) raf = requestAnimationFrame(apply);
+    };
+
+    hero.addEventListener("mousemove", onMove);
+    hero.addEventListener("mouseleave", reset);
 }
 
 /* ---------- Render projects from projects.js ---------- */
